@@ -6,7 +6,7 @@ env: # Environt variable to pass to all tasks
     # ENCRYPTED variables is unique for every repository, so you cant use my one, create you rclone config https://rclone.org/drive/#making-your-own-client-id
     rclone_config: "ENCRYPTED[9f8b866f26f0c4f046518f6946b987375e820ecbd456be8161983084ee98a49f387de11b141f4329f0597d7a99b456fa]"
     CHATID: "ENCRYPTED[959daeb78f5eda6cbd36316439ade6c5866e015d6f80277862622ec3d69df2bdfff78c31b5ba6e5ab21b86ddc38824e1]"
-    API_BOT: "ENCRYPTED[f03cc024af41c36a9e14a40e576d1cc17e3c894ff18538fe204c3eca8530817e4a727ed6a3d7ca43792e3f688690c577]"
+    API_BOT: "ENCRYPTED[f6bbefa2a4f4f22d07c13cd0baed9c42deb251e5222873e91d21a8b7f38e26c2d6694d7bc25daac91f0e83a051108e17]"
 
 
 task:
