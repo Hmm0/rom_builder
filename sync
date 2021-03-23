@@ -11,8 +11,8 @@ repo init -q --no-repo-verify --depth=1 -u git://github.com/Palladium-OS/platfor
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
 
 # Clone Device Sources
-git clone --depth=1 https://github.com/ShapeShiftOS-Devices/device_xiaomi_msm8953-common.git -b 11.0 device/xiaomi/msm8953-common
-git clone --depth=1 https://github.com/Hmm0/android_device_xiaomi_tissot.git -b eleven device/xiaomi/tissot
+git clone --depth=1 https://github.com/Unknownbitch07/android_device_xiaomi_msm8953-common.git -b pd-11.0 device/xiaomi/msm8953-common
+git clone --depth=1 https://github.com/Unknownbitch07/android_device_xiaomi_tissot.git -b pd device/xiaomi/tissot
 git clone --depth=1 https://github.com/Unknownbitch07/android_kernel_xiaomi_msm8953.git -b 11.0 kernel/xiaomi/msm8953
 git clone https://gitlab.com/MASTERGUY/proprietary_vendor_xiaomi.git -b eleven vendor/xiaomi --single-branch --depth=1
 
