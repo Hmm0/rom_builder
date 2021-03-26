@@ -47,7 +47,7 @@ make_metalava(){
 }
 
 make_rom(){
-	tg_post_msg "<b>PalladiumOS CI Build Triggered for Tissot</b>" "$CHATID"
+	tg_post_msg "<b>UBz CI Triggered</b>" "$CHATID"
 	mka palladium -j10
 	if [ -f out/target/product/tissot/PalladiumOS*.zip ]; then
 		zip=$(up out/target/product/tissot/PalladiumOS*.zip)
