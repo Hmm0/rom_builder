@@ -4,6 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
+export ALLOW_MISSING_DEPENDENCIES=true
 lunch ssos_tissot-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -48,7 +49,7 @@ make_metalava(){
 
 make_rom(){
 	tg_post_msg "<b>UBz CI Build Triggered</b>" "$CHATID"
-	make bacon -j10
+	make bacon -j8
 	if [ -f out/target/product/tissot/ShapeShiftOS*.zip ]; then
 		zip=$(up out/target/product/tissot/ShapeShiftOS*.zip)
 		echo " "
