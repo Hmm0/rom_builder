@@ -23,7 +23,3 @@ git clone https://github.com/crdroidandroid/android_hardware_qcom_display.git -b
 git clone https://github.com/crdroidandroid/android_hardware_qcom_media.git -b 11.0-caf-msm8996 hardware/qcom-caf/msm8996/media
 git clone https://github.com/LineageOS/android_hardware_qcom_audio -b lineage-18.0-caf-msm8996 hardware/qcom-caf/msm8996/audio
 
-# Source Fixing
-rm -rf hardware/qcom-caf/wlan
-git clone https://github.com/ArrowOS/android_hardware_qcom_wlan.git -b arrow-11.0-caf hardware/qcom-caf/wlan
-
