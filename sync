@@ -14,7 +14,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 git clone --depth=1 https://github.com/Unknownbitch07/android_device_xiaomi_msm8953-common.git -b ssos-11.0 device/xiaomi/msm8953-common
 git clone --depth=1 https://github.com/Unknownbitch07/android_device_xiaomi_tissot.git -b ssos-11.0 device/xiaomi/tissot
 git clone --depth=1 https://github.com/Unknownbitch07/android_kernel_xiaomi_msm8953.git -b 11.0 kernel/xiaomi/msm8953
-git clone https://gitlab.com/MASTERGUY/proprietary_vendor_xiaomi.git -b eleven vendor/xiaomi --single-branch --depth=1
+git clone https://gitlab.com/Sohil876/proprietary_vendor_xiaomi.git -b eleven vendor/xiaomi --single-branch --depth=1
 
 #hals
 rm -rf hardware/qcom-caf/display hardware/qcom-caf/media hardware/qcom-caf/audio
