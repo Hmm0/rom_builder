@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 source build/envsetup.sh
-lunch dot_land-userdebug
+lunch ssos_land-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -33,32 +33,31 @@ kill %1 # better way to kill it
 ccache -s
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
-up(){
-	curl --upload-file $1 https://transfer.sh/$(basename $1); echo
+#up(){
+	#curl --upload-file $1 https://transfer.sh/$(basename $1); echo
 	# 14 days, 10 GB limit
-}
+#}
 
 # Let's compile by parts! Coz of ram issue!
-make_metalava(){
-	make api-stubs-docs || echo no problem
-	make hiddenapi-lists-docs || echo no problem
-	make system-api-stubs-docs || echo no problem
-	make test-api-stubs-docs || echo no problem
-}
+#make_metalava(){
+	#make api-stubs-docs || echo no problem
+	#make hiddenapi-lists-docs || echo no problem
+	#make system-api-stubs-docs || echo no problem
+	#make test-api-stubs-docs || echo no problem
+#}
 
-make_rom(){
-	tg_post_msg "<b>UBz CI Build Triggered</b>" "$CHATID"
-	make bacon -j8
-	if [ -f out/target/product/tissot/ShapeShiftOS*.zip ]; then
-		zip=$(up out/target/product/tissot/ShapeShiftOS*.zip)
-		echo " "
-		echo "$zip"
-		tg_post_msg "<b>Build Completed</b>%0A%0A<b>Link : </b> <code>"$zip"</code>" "$CHATID"
-	else
-		tg_post_msg "<b>Build Failed, check cirrus console</b>" "$CHATID"
-	fi
-}
-
-make_metalava
-make_rom
+#make_rom(){
+#	tg_post_msg "<b>UBz CI Build Triggered</b>" "$CHATID"
+#	make bacon -j8
+#	if [ -f out/target/product/tissot/ShapeShiftOS*.zip ]; then
+#		zip=$(up out/target/product/tissot/ShapeShiftOS*.zip)
+#		echo " "
+#		echo "$zip"
+#		tg_post_msg "<b>Build Completed</b>%0A%0A<b>Link : </b> <code>"$zip"</code>" "$CHATID"
+#	else
+#		tg_post_msg "<b>Build Failed, check cirrus console</b>" "$CHATID"
+#	fi
+#}
+#make_metalava
+#make_rom
 
